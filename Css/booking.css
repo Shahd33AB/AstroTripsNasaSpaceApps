@@ -1,0 +1,96 @@
+.k-body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    background-image: url(../Media/Wallpaper-stars\ milky-way-starry\ sky-dark-space.jpeg);
+  }
+
+  .starfield-container {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    color: #fff;
+  }
+  
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .ka-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    h1 {
+      font-size: 1.5em;
+    }
+  }
+  
+.header-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.header-icons i {
+  font-size: 2em;
+  margin: 0 10px;
+}
+
+
+
+
+.explore-heading {
+    font-size: 3em; 
+    color: #fff;
+    font-family: 'Hanken Grotesk', sans-serif;    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    animation: glow 5s infinite alternate; 
+}
+
+@keyframes glow {
+    0% {
+        color: #fafdff; /* Start with the glowing color */
+        text-shadow: 0 0 20px rgba(52, 152, 219, 0.8); /* Start with the glowing text shadow */
+    }
+
+
+    100% {
+        color: #3498db; /* Quickly return to the glowing color */
+        text-shadow: 0 0 40px rgba(52, 152, 219, 0.8); /* Quickly bring back the glowing text shadow */
+    }
+}
+
+.small-card {
+  max-width: 20rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.small-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.card-img-top{
+  height: 260px;
+}

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> Admin Dashboard</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="../favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../Css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" href="../Css/dashstyle.css">
+    <link rel="stylesheet" href="../scss/bootstrap.scss">
+    <link rel="stylesheet" href="../Css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand bg-black navbar-light px-4 py-0" style="background-color:black;">
+        <img src="../Media/Fiverr-Logo-Maker (1).png " class="logo">
+        <a href="Dashbord.html" class="navbar-brand d-flex me-4 ">
+            <h2 class="text-light mb-0">ASTROTRIPS</h2>
+        </a>
+        <div class="navbar-nav align-items-center ms-auto pe-5 text-light">
+            <div class="nav-item dropdown">
+                <a href="../Views/Dfeedback.html" class="nav-link ">
+                    <i class="fa-regular fa-comment me-lg-2 text-light "></i>
+                    <span class="d-none d-lg-inline-flex text-light">Feedbacks</span>
+                </a>    
+            </div>
+            <div class="nav-item dropdown">
+                <a href="../Views/Trans&Act.html" class="nav-link ">
+                    <i class="fa-solid fa-shuttle-space me-lg-2 text-light"></i>
+                    <span class="d-none d-lg-inline-flex text-light">Trasnportations&Activies</span>
+                </a>
+            </div>
+            <div class="nav-item dropdown  ">
+                <a href="#" class="nav-link " >
+                    <img class="rounded-circle me-lg-2" src="../Media/ana.jpg" alt="" style="width: 40px; height: 40px;">
+                    <span class="d-none d-lg-inline-flex text-light">Ziad wael</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+        <!-- Content Start -->
+        <div class="content">
+            <!-- Sale & Revenue Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="bg-dark rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-chart-line fa-3x text-light"></i>
+                            <div class="ms-3">
+                                <p class="mb-2 text-light">Today Sale</p>
+                                <h6 class="mb-0 text-light">$12034</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="bg-dark rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-chart-bar fa-3x text-light  "></i>
+                            <div class="ms-3">
+                                <p class="mb-2 text-light">Total Sale</p>
+                                <h6 class="mb-0 text-light">$123400</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="bg-dark rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-chart-area fa-3x text-light"></i>
+                            <div class="ms-3">
+                                <p class="mb-2 text-light">Today Revenue</p>
+                                <h6 class="mb-0 text-light">$5234</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="bg-dark rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-chart-pie fa-3x  text-light"></i>
+                            <div class="ms-3">
+                                <p class="mb-2 text-light">Total Revenue</p>
+                                <h6 class="mb-0 text-light">$55000</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sale & Revenue End -->
+
+
+            <!-- Sales Chart Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-dark text-center rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0 text-light">Worldwide Sales</h6>
+                            </div>
+                            <canvas id="worldwide-sales"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-dark text-center rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0 text-light">Salse & Revenue</h6>
+                            </div>
+                            <canvas id="salse-revenue"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sales Chart End -->
+
+            <!-- Start Buttons -->
+            <div class="container text-center">
+            <div class="row g-12 pt-4 px-4 justify-content-center">
+                <div class="col-sm-4 col-md-4 col-xl-6 align-items-center">
+                <a href="../Views/Trans&Act.html"><button type="button" class="btn btn-lg btn-light m-2 text-dark">Add trasnportations&Activities</button></a>              
+                </div>               
+            </div>
+            </div>
+            <!-- End Buttons -->
+
+            <!-- view Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-12 pt-4">
+                    <div class="col-sm-12 col-md-12 col-xl-12">
+                        <div class="h-100 bg-dark rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0 text-light">View Available Trips</h6>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <input class="form-control bg-transparent" type="text" placeholder="Enter Trip">
+                                <button type="button" class="btn btn-primary ms-2 text-dark">Search</button>
+                            </div>
+                            <div class="d-flex align-items-center border-bottom py-2">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <span class="text-light">skating on saturn</span>
+                                        <a href="../Views/alltickets2.html"><button type="button" class="btn btn-light ms-2 text-dark rounded-pill">details</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center border-bottom py-2">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <span  class="text-light">Ancient lava flowsre Exploration</span>
+                                        <a href="../Views/alltickets1.html"><button type="button" class="btn btn-light ms-2 text-dark rounded-pill">details</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center border-bottom py-2">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <span  class="text-light">Calm Lakes on Titan</span>
+                                        <a href="#booked"><button type="button" class="btn btn-light ms-2 text-dark rounded-pill">on hold</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--veiw End -->
+
+            <!-- Widgets Start -->
+
+            <!--trip-->
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-dark rounded h-100 p-4">
+                            <h6 class="mb-4 text-light">Add Trip</h6>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Trip Name">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Trip ID">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Price" aria-label="Price">
+                                    <span class="input-group-text">    </span>
+                                    <input type="text" class="form-control" placeholder="Duration" aria-label="Duration">
+                                </div>
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Add Description"
+                                        id="floatingTextarea" style="height: 150px;"></textarea>
+                                        <label for="floatingTextarea">Add Description</label>
+                                </div>
+                                <div class="pt-2">  
+                                <button type="submit" class="btn btn-primary text-dark">Add</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- end trip-->
+
+                    <!--modify-->
+                    <div class="col-sm-12 col-md-6 col-xl-6">
+                        <div class="h-100 bg-dark rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0 text-light">Modify Trips</h6>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <input class="form-control bg-transparent" type="text" placeholder="Enter Trip">
+                                <button type="button" class="btn btn-primary ms-2 text-dark">Search</button>
+                            </div>
+                            <div class="d-flex align-items-center border-bottom py-2">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <span class="text-light">skating on saturn</span>
+                                        <button class="btn btn-sm"><i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center border-bottom py-2">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <span class="text-light">Olympus Mons: The largest volcano in the solar system</span>
+                                        <button class="btn btn-sm"><i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center border-bottom py-2">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <span class="text-light">Ancient lava flows</span>
+                                        <button class="btn btn-sm "><i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center border-bottom py-2">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <span class="text-light">Calm Lakes on Titan</span>
+                                        <button class="btn btn-sm"><i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        <!--end modify-->
+                <div class="row g-12 pt-4">
+                    <div class="col-sm-12 col-xl-12">
+                        <div class="bg-dark rounded h-100 p-4 align-items-center justify-content-center">
+                            <div class="d-flex justify-content-between  mb-4">
+                            <h6 class="mb-4 text-light">Feedbacks</h6>
+                            <a href="../Views/Dfeedback.html">Show All</a>
+                            </div>
+                            <div class="owl-carousel testimonial-carousel align-items-center">
+                                <div class="testimonial-item text-center">
+                                    <img class="img-fluid rounded-circle mx-auto mb-4" src="../Media/kimo2.jpg" style="width: 100px; height: 100px;">
+                                    <h5 class="mb-1">Karim Adel</h5>
+                                    <p class="text-light">User</p>
+                                    <p class="mb-0 text-light">It was my first trip but it was AMAZING</p>
+                                </div>
+                                <div class="testimonial-item text-center align-items-center">
+                                    <img class="img-fluid rounded-circle mx-auto mb-4" src="../Media/shahd.jpg" style="width: 100px; height: 100px;">
+                                    <h5 class="mb-1">Shahd Farag</h5>
+                                    <p class="text-light">Frequent User</p>
+                                    <p class="mb-0 text-light">It was a good trip, as usual.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- Widgets End -->
+
+
+            <!-- Footer Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-dark rounded-top p-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 text-center text-sm-start">
+                            &copy; <a href="#">AstroTrips</a>, All Right Reserved. 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+        </div>
+        <!-- Content End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/chart/chart.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../Js/main.js"></script>
+    <script src="../Js/all.min.js"></script>
+    <script src="../lib/chart/chart.min.js"></script>
+    
+    <script type="text/javascript">
+        function link() {
+        var link_s = document.getElementById('link_id').value;
+        document.getElementById('link_str').innerHTML = link_s.link()
+        }
+    </script>
+</body>
+
+</html>
